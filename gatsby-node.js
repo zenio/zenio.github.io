@@ -20,6 +20,48 @@ const { createFilePath, createFileNode } = require(`gatsby-source-filesystem`);
 	}
 };*/
 
+createTagPages = (createPage, posts) => {
+	const allTagsTemplate = path.resolve("src/templates/allTagsIndex.js");
+	const singleTagTemplate = path.resolve("src/templates/singleTagIndex.js");
+
+	const postsByTag = {};
+
+	posts.forEach(({ node }) => {
+		if (node.frontmatter.tags) {
+			node.frontmatter.tags.forEach(tag => {
+				if (!postsByTag[tag]) {
+					postsByTag[tag] = [];
+				}
+
+				postsByTag[tag].push(node);
+			});
+		}
+	});
+
+	const tags = Object.keys(postsByTag);
+
+	createPage({
+		path: "/tags",
+		component: allTagsTemplate,
+		context: {
+			tags: tags.sort()
+		}
+	});
+
+	tags.forEach(tagName => {
+		const posts = postsByTag[tagName];
+
+		createPage({
+			path: `/tags/${tagName}`,
+			component: singleTagTemplate,
+			context: {
+				posts,
+				tagName
+			}
+		});
+	});
+};
+
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 
@@ -37,6 +79,8 @@ exports.createPages = ({ graphql, actions }) => {
 								node {
 									frontmatter {
 										path
+										title
+										tags
 									}
 								}
 							}
@@ -45,6 +89,8 @@ exports.createPages = ({ graphql, actions }) => {
 				`
 			).then(result => {
 				const posts = result.data.allMarkdownRemark.edges;
+
+				createTagPages(createPage, posts);
 
 				posts.forEach(({ node }, index) => {
 					const path = node.frontmatter.path;

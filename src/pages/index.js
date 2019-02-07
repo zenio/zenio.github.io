@@ -2,8 +2,6 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
@@ -21,6 +19,7 @@ const IndexPage = ({ data }) => {
 				);
 			})}
 			<Link to="/about/">About</Link>
+			<Link to="/tags">Tags</Link>
 		</Layout>
 	);
 };
