@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 const AllTagsTemplate = ({ data, pageContext }) => {
 	const { tags } = pageContext;
 	return (
-		<div>
+		<Layout>
 			<ul>
 				{tags.map((tag, index) => {
 					return (
@@ -16,7 +16,7 @@ const AllTagsTemplate = ({ data, pageContext }) => {
 					);
 				})}
 			</ul>
-		</div>
+		</Layout>
 	);
 };
 

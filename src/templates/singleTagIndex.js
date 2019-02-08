@@ -7,7 +7,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
 	console.log(pageContext);
 	const { posts, tagName } = pageContext;
 	return (
-		<div>
+		<Layout>
 			<h1>Posts about {`${tagName}`}</h1>
 			<ul>
 				{posts.map((post, index) => {
@@ -19,7 +19,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
 					);
 				})}
 			</ul>
-		</div>
+		</Layout>
 	);
 };
 
