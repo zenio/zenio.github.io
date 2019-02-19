@@ -9,7 +9,6 @@ const Template = ({ data, pageContext }) => {
 		html
 	} = data.markdownRemark;
 	const { next, prev } = pageContext;
-	console.log(pageContext);
 
 	return (
 		<Layout>

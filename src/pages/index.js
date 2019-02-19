@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 
 const IndexPage = ({ data }) => {
 	const { edges } = data.allMarkdownRemark;
-	console.log(edges);
 	return (
 		<Layout>
 			<h1>Hi! Wellcome!</h1>
