@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
 	<header>
 		<div className="container flex">
 			<h1 id="logo">
-				<Link to="/">{siteTitle || "Default Title"}</Link>
+				<Link to="/">{siteTitle}</Link>
 			</h1>
 
 			<Navigation />

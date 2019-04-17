@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: `My blog`,
+		title: `About data science`,
 		description: `Data scientist blog`,
 		author: `@zenio`
 	},
