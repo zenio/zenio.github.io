@@ -7,12 +7,8 @@ import { Navigation } from "./navigation";
 const Header = ({ siteTitle }) => (
 	<header>
 		<div className="container flex">
-			<h1>
-				<Link
-					to="/"
-				>
-					{siteTitle}
-				</Link>
+			<h1 id="logo">
+				<Link to="/">{siteTitle || "Default Title"}</Link>
 			</h1>
 
 			<Navigation />

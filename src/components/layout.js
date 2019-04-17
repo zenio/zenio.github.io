@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import Header from "./header/header";
+import "./normalize.css";
+import "./skeleton.css";
 import "./layout.css";
 
 const Layout = ({ children }) => (
@@ -24,7 +26,11 @@ const Layout = ({ children }) => (
 				</Helmet>
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<main>
-					<div className="container">{children}</div>
+					<div className="container">
+						<div className="row">
+							<div className="one-half column">{children}</div>
+						</div>
+					</div>
 				</main>
 				<footer className="container">© {new Date().getFullYear()}</footer>
 			</>

@@ -2,52 +2,26 @@
 
 html,
 body {
-	color: #ffffff;
+	color: #000;
 	background: #fff;
 	font-family: "Roboto", sans-serif;
 	width: 100%;
 	height: 100%;
 }
 
-.container {
-	margin: 0 auto;
-	max-width: 960px;
-	font-family: "Roboto", sans-serif;
-}
-
-.flex {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-}
-
 header {
-	border-top: 5px solid #000;
 	padding: 30px 0;
+	border-top: 5px solid #111;
+}
+
+#logo {
+	float: left;
 }
 
 header nav {
-	align-self: flex-end;
+	float: right;
 }
 
 header nav a {
-	color: #222;
-	padding: 0.5rem 1rem;
-	text-decoration: none;
-	font-size: 1.5rem;
-}
-header nav a:hover {
-	color: #999;
-}
-
-header h1 {
-	margin: 0;
-	margin-right: auto;
-}
-
-@media (max-width: 640px) {
-	.flex {
-		flex-direction: column;
-	}
+	padding: 0 20px;
 }
