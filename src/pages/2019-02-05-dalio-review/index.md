@@ -8,10 +8,26 @@ tags: ["Dalio", "Book review"]
 
 Dalio is super ...
 
+![alt text](/images/gatsby-astronaut.png)
+
 ## Pros ...
 
-Wonderful
+- Red
+- Green
+- Blue
 
 ## Cons ...
 
-Weird
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+    This is a code block.
+
+---
+
+This is [an example](http://example.com/ "Title") inline link.
+
+_single asterisks_
+
+**double asterisks**

@@ -28,7 +28,19 @@ module.exports = {
 			}
 		},
 		`gatsby-plugin-typography`,
-		`gatsby-transformer-remark`,
+		{
+			resolve: "gatsby-transformer-remark",
+			options: {
+				plugins: [
+					{
+						resolve: "gatsby-remark-images",
+						options: {
+							maxWidth: 960
+						}
+					}
+				]
+			}
+		},
 		"gatsby-plugin-offline",
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -36,7 +48,8 @@ module.exports = {
 				path: `${__dirname}/src/pages`,
 				name: "pages"
 			}
-		}
+		},
+		`gatsby-remark-copy-linked-files`
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.app/offline
 		// 'gatsby-plugin-offline',
