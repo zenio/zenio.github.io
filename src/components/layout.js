@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
 				<main>
 					<div className="container">
 						<div className="row">
-							<div className="one-half column">{children}</div>
+							<div className="column">{children}</div>
 						</div>
 					</div>
 				</main>

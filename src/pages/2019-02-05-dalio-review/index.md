@@ -1,9 +1,9 @@
 ---
-title: "Dalio biography book review"
-description: Dalio pricipals are awesome
-path: "/dalio-review"
+title: Test article
+description: Test description
+path: "/test-post"
 date: "2019-02-05"
-tags: ["Dalio", "Book review"]
+tags: []
 ---
 
 Dalio is super ...
