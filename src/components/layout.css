@@ -17,12 +17,25 @@ header a {
 	color: #111;
 }
 
+header > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 #logo {
 	float: left;
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	height: 100px;
+	padding-left: 120px;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
 }
 
 header nav {
-	float: right;
 }
 
 header nav a {
