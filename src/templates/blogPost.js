@@ -5,19 +5,38 @@ import Layout from "../components/layout";
 
 const Template = ({ data, pageContext }) => {
 	const {
-		frontmatter: { title },
+		frontmatter: { title, date, tags },
 		html
 	} = data.markdownRemark;
 	const { next, prev } = pageContext;
 
 	return (
 		<Layout>
-			<div>
+			<div className="post">
 				<h1>{title}</h1>
+				<div className="date">{date}</div>
 				<div dangerouslySetInnerHTML={{ __html: html }} />
-
-				{prev && <Link to={prev.frontmatter.path}>Prev</Link>}
-				{next && <Link to={next.frontmatter.path}>Next</Link>}
+				{tags.length && (
+					<ul className="tags">
+						{tags.map((tag, index) => {
+							return (
+								<li key={index}>
+									<Link to={`tags/${tag}`}>{tag}</Link>
+								</li>
+							);
+						})}
+					</ul>
+				)}
+				{prev && (
+					<Link to={prev.frontmatter.path}>
+						{prev.frontmatter.title}&nbsp;»
+					</Link>
+				)}
+				{next && (
+					<Link to={next.frontmatter.path}>
+						«&nbsp;{next.frontmatter.title}
+					</Link>
+				)}
 			</div>
 		</Layout>
 	);
@@ -29,6 +48,8 @@ export const query = graphql`
 			html
 			frontmatter {
 				title
+				date(formatString: "D MMMM YYYY")
+				tags
 			}
 		}
 	}

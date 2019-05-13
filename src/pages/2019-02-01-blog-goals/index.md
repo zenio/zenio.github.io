@@ -3,7 +3,7 @@ title: Why I decided to start writing this blog
 description: Why I decided to start this blog
 date: "2019-02-01"
 path: "/blog-goals"
-tags: []
+tags: ["Misc", "Another tag"]
 ---
 
 I welcome you on my personal blog. This blog was born in the process of exploring GatsbyJS framework. Gatsby turned out to be very simple, so gradually this experiment evolved into something bigger than simple pet project.
