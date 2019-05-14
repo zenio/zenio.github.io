@@ -8,10 +8,7 @@ export default () => (
 		<h1>About me</h1>
 		<p>Nothing yet here...</p>
 		<p>
-			<Link to="/blog-goals">Description about why and what this blog is.</Link>
-		</p>
-		<p>
-			<Link to="/">Home</Link>
+			<Link to="/blog-goals">Why I decided to start writing this blog?</Link>
 		</p>
 	</Layout>
 );

@@ -6,7 +6,7 @@ date: "2019-02-05"
 tags: ["Tag"]
 ---
 
-Dalio is super ...
+Just test article ...
 
 ![alt text](/images/gatsby-astronaut.png)
 

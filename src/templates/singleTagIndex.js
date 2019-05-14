@@ -8,7 +8,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
 	const { posts, tagName } = pageContext;
 	return (
 		<Layout>
-			<h1>Posts about {`${tagName}`}</h1>
+			<h1>Posts about «{`${tagName}`}»</h1>
 			<ul>
 				{posts.map((post, index) => {
 					const { path, title } = post.frontmatter;

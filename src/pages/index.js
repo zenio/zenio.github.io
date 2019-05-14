@@ -17,8 +17,6 @@ const IndexPage = ({ data }) => {
 					</div>
 				);
 			})}
-			<Link to="/about/">About</Link>
-			<Link to="/tags">Tags</Link>
 		</Layout>
 	);
 };

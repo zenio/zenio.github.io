@@ -8,6 +8,75 @@ body {
 	font-size: 100%;
 }
 
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.9rem;
+}
+h3 {
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 1.7rem;
+}
+h5 {
+	font-size: 1.6rem;
+}
+h6 {
+	font-size: 1.5rem;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+	h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 2.6rem;
+	}
+	h3 {
+		font-size: 2.4rem;
+	}
+	h4 {
+		font-size: 2rem;
+	}
+	h5 {
+		font-size: 1.6rem;
+	}
+	h6 {
+		font-size: 1.3rem;
+	}
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+	margin-bottom: 1rem;
+}
+
+p,
+span,
+a,
+footer {
+	font-size: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1rem;
+}
+
 header {
 	padding: 30px 0;
 	border-top: 5px solid #111;
@@ -18,7 +87,7 @@ header a {
 	color: #111;
 }
 
-header > div {
+header .container > div {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -29,18 +98,16 @@ header > div {
 	background-image: url("../images/logo.png");
 	background-repeat: no-repeat;
 	height: 100px;
-	padding-left: 120px;
+	padding-left: 100px;
 	vertical-align: middle;
 	display: flex;
 	align-items: center;
 	margin-bottom: 0;
-}
-
-header nav {
+	line-height: 1;
 }
 
 header nav a {
-	padding: 0 20px;
+	padding: 0 1rem;
 }
 
 header nav a.active {
@@ -62,7 +129,7 @@ blockquote {
 }
 
 .post .date {
-	font-size: 1.3em;
+	font-size: 1.5rem;
 	text-align: center;
 	margin-bottom: 1em;
 	color: #888;
