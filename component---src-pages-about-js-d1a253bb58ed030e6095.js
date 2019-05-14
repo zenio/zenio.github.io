@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{145:function(e,t,n){"use strict";n.r(t);var a=n(0),l=n.n(a),o=n(150),r=n(152);t.default=function(){return l.a.createElement(r.a,null,l.a.createElement("h1",null,"About me"),l.a.createElement("p",null,"Nothing yet here..."),l.a.createElement("p",null,l.a.createElement(o.Link,{to:"/blog-goals"},"Why I decided to start writing this blog?")))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-d1a253bb58ed030e6095.js.map
