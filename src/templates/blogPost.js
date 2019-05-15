@@ -1,11 +1,12 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import Disqus from "gatsby-plugin-disqus";
 
 import Layout from "../components/layout";
 
 const Template = ({ data, pageContext }) => {
 	const {
-		frontmatter: { title, date, tags },
+		frontmatter: { title, date, tags, slug },
 		html
 	} = data.markdownRemark;
 	const { next, prev } = pageContext;
@@ -27,6 +28,7 @@ const Template = ({ data, pageContext }) => {
 						})}
 					</ul>
 				)}
+				<Disqus identifier={slug} title={title} />
 				{prev && (
 					<Link to={prev.frontmatter.path}>
 						{prev.frontmatter.title}&nbsp;»

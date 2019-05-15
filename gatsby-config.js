@@ -24,7 +24,7 @@ module.exports = {
 				background_color: `#663399`,
 				theme_color: `#663399`,
 				display: `minimal-ui`,
-				icon: `src/images/logo.png` // This path is relative to the root of the site.
+				icon: `src/images/icon.png` // This path is relative to the root of the site.
 			}
 		},
 		{
@@ -53,6 +53,12 @@ module.exports = {
 			resolve: `gatsby-plugin-google-analytics`,
 			options: {
 				trackingId: "UA-140164026-1"
+			}
+		},
+		{
+			resolve: `gatsby-plugin-disqus`,
+			options: {
+				shortname: `zenio`
 			}
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
