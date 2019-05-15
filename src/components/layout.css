@@ -77,6 +77,19 @@ h6 {
 	margin-bottom: 1rem;
 }
 
+#logo {
+	float: left;
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	height: 100px;
+	padding-left: 100px;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
 header {
 	padding: 30px 0;
 	border-top: 5px solid #111;
@@ -93,17 +106,10 @@ header .container > div {
 	justify-content: space-between;
 }
 
-#logo {
-	float: left;
-	background-image: url("../images/logo.png");
-	background-repeat: no-repeat;
-	height: 100px;
-	padding-left: 100px;
-	vertical-align: middle;
-	display: flex;
-	align-items: center;
-	margin-bottom: 0;
-	line-height: 1;
+@media (max-width: 650px) {
+	header .container > div {
+		flex-flow: column;
+	}
 }
 
 header nav a {

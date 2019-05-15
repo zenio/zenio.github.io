@@ -33,8 +33,10 @@ const Layout = ({ children }) => (
 						</div>
 					</div>
 				</main>
-				<footer className="container">
-					© {new Date().getFullYear()} {data.site.siteMetadata.author}
+				<footer>
+					<div className="container">
+						© {new Date().getFullYear()} {data.site.siteMetadata.author}
+					</div>
 				</footer>
 			</>
 		)}
