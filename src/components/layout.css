@@ -64,7 +64,8 @@ form {
 p,
 span,
 a,
-footer {
+footer,
+li {
 	font-size: 1.4rem;
 }
 
